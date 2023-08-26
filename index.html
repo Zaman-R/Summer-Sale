@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Sale</title>
+
+    <!-- JavaScript and CSS Links -->
+    <script src="index.js" defer></script>
+    <!-- Font Family Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,700&family=Open+Sans:wght@700;800&family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS and Daisy UI CDN Links -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.2.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="flex justify-center items-center bg-[#F9F6E2]">
+        <div class="hero min-h-screen bg-[#f9f6e2]">
+            <div class="hero-content flex-col lg:flex-row-reverse bg-[#f9f6e2]">
+                <img src="images/Summer 1.png" class="max-w-lg rounded-lg bg-[#f9f6e2]" />
+
+                <div class="text-center">
+                    <h1 class="text-3xl">---SALE FEVER---</h1>
+                    <h1 class="text-7xl font-bold my-5">Purchase TK 200 or above & get <span class="text-[#e527b2]">20%
+                            off</span></h1>
+                    <h2 class="text-xl font-normal py-6">Use Promo Code <span
+                            class="bg-[#e527b2] text-white font-bold p-3 rounded-md">SELL200</span></h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section class="flex justify-center mt-24 ">
+            <div class="hero justify-center ">
+                <div class="hero-content lg:flex-row-reverse flex-col-reverse sm:items-start items-center ">
+                    <!-- Left Section -->
+                    <div class="left mt-14">
+                        <div id="Right_Side" class="flex relative">
+                            <div id="cards" class="flex align-top gap-3 justify-center flex-col">
+                                <!-- Coupon Section -->
+                                <div class="card bg-base-100 shadow-xl">
+                                    <div class="card-body">
+                                        <h2 class="text-lg font-bold">Have a Coupon?</h2>
+                                        <div class="join">
+                                            <div>
+                                                <div>
+                                                    <input class="input input-bordered join-item"
+                                                        placeholder="Coupon code" id="coupon" />
+                                                </div>
+                                            </div>
+                                            <div class="indicator">
+                                                <button class="btn join-item bg-[#E527B2] text-white" id="apply"
+                                                    disabled>Apply</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Selected Item Purchase Section -->
+                                <div class="card bg-base-100 shadow-xl">
+                                    <div class="card-body pb-20">
+                                        <!-- Selected Items -->
+                                        <ol id="total-items" class="list-decimal font-medium mx-4">
+                                            <li>Dummy Items1</li>
+                                            <li>Dummy Items2</li>
+                                            <li>Dummy Items3</li>
+                                        </ol>
+                                        <hr>
+
+                                        <!-- Total Price Calculation -->
+                                        <p><span class="font-medium">Total Price:</span> <span
+                                                id="total_price">00.00</span> TK</p>
+                                        <p><span class="font-medium">Discount:</span> <span id="discount">00.00</span>
+                                            TK</p>
+                                        <p><span class="font-medium">Total:</span> <span id="initialTotal">00.00</span>
+                                            TK</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn join-item bg-[#E527B2] text-white w-56 ml-20 -mt-4 absolute" id="makeP"
+                        disabled onclick="window.location.href='#my_modal_8'">Make Purchase</button>
+                     
+                        <div class="modal" id="my_modal_8">
+                            <div class="modal-box">
+                               <div class="flex justify-center"><img src="images/congo.png" alt="Product Image" class="max-w-sm rounded-lg mb-4" /></div> 
+                                <h3 class="font-extrabold text-4xl text-center">Congratulations</h3>
+                                <p class="py-4 text-center">Your Purchase the product</p>
+                                <div class="modal-action flex justify-center">
+                                    <a href="index.html" class="btn join-item bg-[#E527B2] text-white max-w-md">Go Home</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Section -->
+                    <div class="flex text-center sm:text-left ">
+                    <div class="right items-center">
+                        <h2 class="font-bold text-[40px] ">Kitchenware</h2>
+
+                        <!-- Kitchen Section -->
+                        <div class="Card_Section flex flex-col lg:flex-row gap-x-4 gap-y-4 ">
+                            <!-- Card 1 -->
+                            <div class="flex cards Alada" id="card1">
+                                <div class="card w-96 bg-base-100 shadow-xl">
+                                    <figure class="px-10 pt-10">
+                                        <div class="rounded-xl bg-slate-100 px-20 py-8">
+                                            <img src="images/prod1.png" class="max-h-52" />
+                                        </div>
+                                    </figure>
+                                    <div class="card-body items-center text-center">
+                                        <!-- Rating MD -->
+                                        <div class="rating rating-md">
+                                            <input type="radio" name="rating-7"
+                                                class="mask mask-star-2 bg-orange-400" />
+                                            <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400"
+                                                checked />
+                                            <input type="radio" name="rating-7"
+                                                class="mask mask-star-2 bg-orange-400" />
+                                            <input type="radio" name="rating-7"
+                                                class="mask mask-star-2 bg-orange-400" />
+                                            <input type="radio" name="rating-7"
+                                                class="mask mask-star-2 bg-orange-400" />
+                                        </div>
+                                        <p id="idLi1">K. Accessories</p>
+                                        <p><span id="taka1">39.00</span> TK</p>
+                                        <div class="card-actions">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div id="card2" class="flex Alada">
+                                <div class="card w-96 bg-base-100 shadow-xl">
+                                    <figure class="px-10 pt-10">
+                                        <div class="rounded-xl bg-slate-100 px-20 py-8">
+                                            <img src="images/prod2.png" class="max-h-52" />
+                                        </div>
+                                    </figure>
+                                    <div class="card-body items-center text-center">
+                                        <!-- Rating MD -->
+                                        <div class="rating rating-md">
+                                            <input type="radio" name="rating-7"
+                                                class="mask mask-star-2 bg-orange-400" />
+                                            <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400"
+                                                checked />
+                                            <input type="radio" name="rating-7"
+                                                class="mask mask-star-2 bg-orange-400" />
+                                            <input type="radio" name="rating-7"
+                                                class="mask mask-star-2 bg-orange-400" />
+                                            <input type="radio" name="rating-7"
+                                                class="mask mask-star-2 bg-orange-400" />
+                                        </div>
+                                        <p id="idLi2">K. Accessories</p>
+                                        <p><span id="taka2">25.00</span> TK</p>
+                                        <div class="card-actions">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div id="card3" class="flex Alada">
+                                <div class="card w-96 bg-base-100 shadow-xl">
+                                    <figure class="px-10 pt-10">
+                                        <div class="rounded-xl bg-slate-100 px-20 py-8">
+                                            <img src="images/prod3.png" class="max-h-52" />
+                                        </div>
+                                    </figure>
+                                    <div class="card-body items-center text-center">
+                                        <!-- Rating MD -->
+                                        <div class="rating rating-md">
+                                            <input type="radio" name="rating-7"
+                                                class="mask mask-star-2 bg-orange-400" />
+                                            <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400"
+                                                checked />
+                                            <input type="radio" name="rating-7"
+                                                class="mask mask-star-2 bg-orange-400" />
+                                            <input type="radio" name="rating-7"
+                                                class="mask mask-star-2 bg-orange-400" />
+                                            <input type="radio" name="rating-7"
+                                                class="mask mask-star-2 bg-orange-400" />
+                                        </div>
+                                        <p id="idLi3">Home Cooker</p>
+                                        <p><span id="taka3">49.00</span> TK</p>
+                                        <div class="card-actions">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sportswear Section -->
+                        <div id="Sportswear" class="">
+                            <div>
+                                <h2 class="font-bold text-[40px] mt-10">Sportswear</h2>
+
+                                <!-- Card Section Kitchen -->
+                                <div class="Card_Section flex flex-col lg:flex-row gap-x-4 gap-y-4">
+                                    <!-- Card 1 -->
+                                    <div id="cards" class="flex Alada">
+                                        <div class="card w-96 bg-base-100 shadow-xl">
+                                            <figure class="px-10 pt-10">
+                                                <div class="rounded-xl bg-slate-100 px-20 py-12 flex justify-center items-center">
+                                                    <img src="images/prod4.png" class="max-h-52" />
+                                                </div>
+                                            </figure>
+                                            <div class="card-body items-center text-center">
+                                                <!-- Rating MD -->
+                                                <div class="rating rating-md">
+                                                    <input type="radio" name="rating-7"
+                                                        class="mask mask-star-2 bg-orange-400" />
+                                                    <input type="radio" name="rating-7"
+                                                        class="mask mask-star-2 bg-orange-400" checked />
+                                                    <input type="radio" name="rating-7"
+                                                        class="mask mask-star-2 bg-orange-400" />
+                                                    <input type="radio" name="rating-7"
+                                                        class="mask mask-star-2 bg-orange-400" />
+                                                    <input type="radio" name="rating-7"
+                                                        class="mask mask-star-2 bg-orange-400" />
+                                                </div>
+                                                <p id="idLi4">Sports Back Cap</p>
+                                                <p><span id="taka4">49.00</span> TK</p>
+                                                <div class="card-actions">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card 2 -->
+                                    <div id="cards" class="flex Alada">
+                                        <div class="card w-96 bg-base-100 shadow-xl">
+                                            <figure class="px-10 pt-10">
+                                                <div class="rounded-xl bg-slate-100 px-20 py-8">
+                                                    <img src="images/prod5.png" class="max-h-52" />
+                                                </div>
+                                            </figure>
+                                            <div class="card-body items-center text-center">
+                                                <!-- Rating MD -->
+                                                <div class="rating rating-md">
+                                                    <input type="radio" name="rating-7"
+                                                        class="mask mask-star-2 bg-orange-400" />
+                                                    <input type="radio" name="rating-7"
+                                                        class="mask mask-star-2 bg-orange-400" checked />
+                                                    <input type="radio" name="rating-7"
+                                                        class="mask mask-star-2 bg-orange-400" />
+                                                    <input type="radio" name="rating-7"
+                                                        class="mask mask-star-2 bg-orange-400" />
+                                                    <input type="radio" name="rating-7"
+                                                        class="mask mask-star-2 bg-orange-400" />
+                                                </div>
+                                                <p id="idLi5">Full Jersey Set</p>
+                                                <p><span id="taka5">69.00</span> TK</p>
+                                                <div class="card-actions">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card 3 -->
+                                    <div id="cards" class="flex Alada">
+                                        <div class="card w-96 bg-base-100 shadow-xl">
+                                            <figure class="px-10 pt-10">
+                                                <div class="rounded-xl bg-slate-100 px-20 py-8">
+                                                    <img src="images/prod6.png" class="max-h-52" />
+                                                </div>
+                                            </figure>
+                                            <div class="card-body items-center text-center">
+                                                <!-- Rating MD -->
+                                                <div class="rating rating-md">
+                                                    <input type="radio" name="rating-7"
+                                                        class="mask mask-star-2 bg-orange-400" />
+                                                    <input type="radio" name="rating-7"
+                                                        class="mask mask-star-2 bg-orange-400" checked />
+                                                    <input type="radio" name="rating-7"
+                                                        class="mask mask-star-2 bg-orange-400" />
+                                                    <input type="radio" name="rating-7"
+                                                        class="mask mask-star-2 bg-orange-400" />
+                                                    <input type="radio" name="rating-7"
+                                                        class="mask mask-star-2 bg-orange-400" />
+                                                </div>
+                                                <p id="idLi6">Sports Cates</p>
+                                                <p><span id="taka6">159.00</span> TK</p>
+                                                <div class="card-actions">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
